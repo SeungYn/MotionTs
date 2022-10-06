@@ -1,9 +1,3 @@
-import {
-  EnableDragging,
-  EnableDrop,
-  EnableHover,
-} from '../../decorators/draggable.js';
-import { Draggable, Droppable, Hoverable } from '../common/type.js';
 import { BaseComponent, Component } from '../component.js';
 
 export interface Composable {
@@ -18,7 +12,7 @@ type OnDragStateListener<T extends Component> = (
   target: T,
   state: DragState
 ) => void;
-interface SectionContainer extends Component, Composable, Draggable, Hoverable {
+interface SectionContainer extends Component, Composable {
   setOnCloseListener(listener: OnCloseListener): void;
   setOnDragStateListener(listener: OnDragStateListener<SectionContainer>): void;
   muteChildren(state: 'mute' | 'unmute'): void;
@@ -124,7 +118,7 @@ export class PageItemComponent
 @EnableDrop
 export class PageComponent
   extends BaseComponent<HTMLUListElement>
-  implements Composable, Droppable
+  implements Composable
 {
   private children = new Set<SectionContainer>();
   private dropTarget?: SectionContainer;

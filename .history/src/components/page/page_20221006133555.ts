@@ -1,9 +1,4 @@
-import {
-  EnableDragging,
-  EnableDrop,
-  EnableHover,
-} from '../../decorators/draggable.js';
-import { Draggable, Droppable, Hoverable } from '../common/type.js';
+import { Draggable, Hoverable } from '../common/type.js';
 import { BaseComponent, Component } from '../component.js';
 
 export interface Composable {
@@ -124,7 +119,7 @@ export class PageItemComponent
 @EnableDrop
 export class PageComponent
   extends BaseComponent<HTMLUListElement>
-  implements Composable, Droppable
+  implements Composable
 {
   private children = new Set<SectionContainer>();
   private dropTarget?: SectionContainer;

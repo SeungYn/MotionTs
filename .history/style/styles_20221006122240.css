@@ -263,7 +263,7 @@ body {
   opacity: 0.2;
 }
 
-@keyframes drag_start {
+@keyframesdrag_start {
   0% {
     opacity: 1;
   }
@@ -271,8 +271,4 @@ body {
   100% {
     opacity: 0.2;
   }
-}
-
-.drop-area {
-  border: 2px solid var(--accent-color);
 }

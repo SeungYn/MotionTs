@@ -4,8 +4,8 @@ export interface Component {
   attach(component: Component, position?: InsertPosition): void;
   registerEventListener<K extends keyof HTMLElementEventMap>(
     typs: K,
-    listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any
-  ): void;
+    listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any): void;
+  )
 }
 
 /**

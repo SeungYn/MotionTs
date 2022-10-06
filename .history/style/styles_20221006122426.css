@@ -272,7 +272,3 @@ body {
     opacity: 0.2;
   }
 }
-
-.drop-area {
-  border: 2px solid var(--accent-color);
-}

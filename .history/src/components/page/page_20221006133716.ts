@@ -1,8 +1,3 @@
-import {
-  EnableDragging,
-  EnableDrop,
-  EnableHover,
-} from '../../decorators/draggable.js';
 import { Draggable, Droppable, Hoverable } from '../common/type.js';
 import { BaseComponent, Component } from '../component.js';
 

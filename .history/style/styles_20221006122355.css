@@ -260,7 +260,7 @@ body {
 
 .lifted {
   animation: drag_start 250ms;
-  opacity: 0.2;
+  opacity: 0;
 }
 
 @keyframes drag_start {
@@ -271,8 +271,4 @@ body {
   100% {
     opacity: 0.2;
   }
-}
-
-.drop-area {
-  border: 2px solid var(--accent-color);
 }
